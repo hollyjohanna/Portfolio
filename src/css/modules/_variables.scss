@@ -1,0 +1,55 @@
+//=======================================================
+//                          FONTS
+//=======================================================
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Julius+Sans+One&display=swap');
+$mainfont: 'Didact Gothic', sans-serif;
+$headingfont: 'Julius Sans One', sans-serif;
+
+//=======================================================
+//                         COLOURS
+//=======================================================
+$darkpink: #d67992;
+$lightpink: #f0cad4;
+$backgroundpink: #fefafb;
+$backgroundblue: #E8EDF2;
+$backgroundblueintense: #C7DAE4;
+$black: #000000;
+$white: #FFFFFF;
+$grey: #394148;
+$blue: #247ba0;
+$yellow: #fcd45d;
+
+//=======================================================
+//                          MIXINS
+//=======================================================
+@mixin button {
+    padding: 20px;
+    width: 170px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    display: block;
+    font-size: 20px;
+    font-family: $headingfont;
+    transition: all .3s ease-in-out;
+}
+
+@mixin sm-padding {
+    padding: 2rem;
+}
+
+@mixin md-padding {
+    padding: 3rem;
+}
+
+@mixin lg-padding {
+    padding: 4rem;
+}
+
+@mixin links {
+    text-decoration: none;
+    font-family: $headingfont;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}

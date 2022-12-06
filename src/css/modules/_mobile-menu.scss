@@ -1,0 +1,35 @@
+#mobile-menu {
+    background-color: #f0cad4f7;
+    padding: 50px;
+    width: 100%;
+    position: absolute;
+    ul {
+        list-style: none;
+        li {
+            text-align: center;
+            a {
+                @include links;
+                color: black;
+                display: inline-block;
+                margin: 15px 0;
+                font-size: 25px;
+            }
+            a:hover {
+                color: $darkpink;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #mobile-menu {
+        ul {
+            li {
+                a {
+                    margin-bottom: 35px;
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+}

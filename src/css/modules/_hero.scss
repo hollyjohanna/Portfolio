@@ -1,0 +1,225 @@
+#hero {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px 60px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 305px;
+    #hero-text-container {
+        text-align: center;
+        width: 100%;
+        animation: fade-up-in 3s;
+        // overflow: hidden;
+        h1 {
+            font-family: $headingfont;
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        #h2-container {
+            font-family: $headingfont;
+            font-size: 20px;
+            font-weight: 100;
+            margin-bottom: 20px;
+            h2 {
+                display: inline-block;
+            }
+            #holliday {
+                margin-left: 10px;
+                color: $blue;
+                transition: all .3s ease-in-out;
+            }
+        }
+        #desktop-tagline {
+            font-family: $mainfont;
+            display: none;
+            font-size: 18px;
+        }
+    }
+    img {
+        width: 100%;
+        animation: image-fade 3s;
+    }
+    #mobile-tagline {
+        margin-top: 10px;
+        font-family: $mainfont;
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        animation: text-fade 3s;
+    }
+
+}
+
+@keyframes fade-up-in {
+    0% {
+        opacity: 0;
+        max-height: 7px;
+    }
+    100% {
+        opacity: 1;
+        max-height: 107.5px;
+    }
+}
+
+@keyframes image-fade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes text-fade-slow {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #hero {
+        margin: 40px 90px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 588px;
+        #hero-text-container {
+            text-align: left;
+            width: 40%;
+            animation: tablet-fade-in 2s;
+            h1 {
+                margin-top: 40px;
+                font-size: 80px;
+            }
+            #h2-container {
+                margin-bottom: 0;
+            }
+            h2 {
+                font-size: 30px;
+                margin-bottom: 65px;
+            }
+            #desktop-tagline {
+                display: block;
+                font-size: 20px;
+                animation: tablet-fade-in-text 4s;
+            }
+        }
+        img {
+            width: 60%;
+            animation: tablet-image-an 2s;
+        }
+        #mobile-tagline {
+            display: none;
+        }
+    }
+    @keyframes tablet-fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes tablet-image-an {
+        0% {
+            opacity: 0;
+            margin-top: 50px;
+        }
+        50% {
+            opacity: 0;
+            margin-top: 50px;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
+    @keyframes tablet-fade-in-text {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    #hero {
+        margin: 80px 170px;
+        max-width: 684px;
+        margin-left: auto;
+        margin-right: auto;
+        #hero-text-container {
+            width: 43%;
+            h1 {
+                margin-top: 40px;
+                font-size: 100px;
+            }
+            #h2-container {
+                #holliday:hover {
+                    scale: 1.1;
+                    margin-left: 20px;
+                }
+            }
+            h2 {
+                font-size: 40px;
+                margin-bottom: 50px;
+            }
+            #desktop-tagline {
+                font-size: 20px;
+            }
+        }
+        img {
+            width: 57%;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #hero {
+        margin: 80px 170px;
+        max-width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+        #hero-text-container {
+            width: 45%;
+            h1 {
+                margin-top: 40px;
+                font-size: 150px;
+            }
+            h2 {
+                font-size: 63px;
+                margin-bottom: 60px;
+            }
+            #desktop-tagline {
+                font-size: 30px;
+            }
+        }
+        img {
+            width: 55%;
+        }
+    }
+}

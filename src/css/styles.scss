@@ -1,3 +1,59 @@
+@import "./modules/variables";
+@import "./modules/navbar";
+@import "./modules/mobile-menu";
+@import "./modules/hero";
+@import "./modules/hm-pg-skills";
+@import "./modules/hm-pg-projects";
+@import "./modules/footer";
+@import "./modules/about-pg";
+@import "./modules/portfolio-pg";
+@import "./modules/project";
+
 * {
-    padding: 20px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $backgroundpink;
+    min-height: 100vh;
+    cursor: none;
+}
+
+.cursor{
+    z-index: 999;
+    position: fixed;
+    background-color: $darkpink;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 10px $darkpink,
+                0 0 40px $darkpink,
+                0 0 60px $darkpink;
+    animation: colors 3s infinite;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+@keyframes colors {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.cursor:before{
+    content: '';
+    position: absolute;
+    background-color: $darkpink;
+    width: 30px;
+    height: 30px;
+    opacity: 0.2;
+    transform: translate(-33%, -33%);
+    border-radius: 50%;
 }

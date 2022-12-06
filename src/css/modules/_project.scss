@@ -1,0 +1,186 @@
+#project-page {
+    padding: 40px 60px;
+    width: 100%;
+    .single-project-container {
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            font-family: $headingfont;
+            margin-bottom: 30px;
+        }
+        .project-content {
+            #project-img {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            a {
+                text-decoration: none;
+                button {
+                    @include button;
+                    background-color: $blue;
+                    margin-bottom: 30px;
+                }
+                button:hover {
+                    background-color: $darkpink;
+                }
+            }
+            p {
+                font-family: $mainfont;
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            img {
+                margin-top: 50px;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+        button {
+            margin-top: 30px;
+            @include button;
+            background-color: $darkpink;
+            cursor: pointer;
+            width: auto;
+        }
+        button:hover {
+            background-color: $blue;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #project-page {
+        padding: 50px 90px;
+        width: 100%;
+        .single-project-container {
+            h2 {
+                text-align: left;
+                font-size: 40px;
+            }
+            .project-content {
+                #project-img {
+                    width: 100%;
+                    margin-bottom: 40px;
+                }
+                a {
+                    button {
+                        margin-bottom: 40px;
+                    }
+                }
+                p {
+                    font-family: $mainfont;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+                img {
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            button {
+                margin: 0;
+                @include button;
+                background-color: $darkpink;
+                cursor: pointer;
+                width: auto;
+            }
+            button:hover {
+                background-color: $blue;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #project-page {
+        padding: 70px 100px;
+        width: 100%;
+        .single-project-container {
+            h2 {
+                text-align: left;
+                font-size: 50px;
+            }
+            .project-content {
+                display: flex;
+                flex-direction: column;
+                #project-img {
+                    width: 60%;
+                    margin-bottom: 40px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                a {
+                    button {
+                        margin-bottom: 40px;
+                    }
+                }
+                p {
+                    font-family: $mainfont;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+                figure {
+                    width: 80%;
+                    margin: auto;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    margin: 40px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #project-page {
+        padding: 70px 250px;
+        width: 100%;
+        .single-project-container {
+            max-width: 1202px;
+            margin: auto;
+            .project-content {
+                display: flex;
+                flex-direction: column;
+                #project-img {
+                    width: 40%;
+                    margin-bottom: 40px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                a {
+                    button {
+                        margin-bottom: 40px;
+                    }
+                }
+                p {
+                    font-family: $mainfont;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+                figure {
+                    width: 80%;
+                    margin: auto;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    margin: 40px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

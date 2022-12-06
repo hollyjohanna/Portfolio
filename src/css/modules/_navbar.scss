@@ -1,0 +1,151 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px 20px 40px;
+    #desktop-ul {
+        display: none;
+    }
+    #logo {
+        font-size: 30px;
+        text-align: left;
+        width: 50%;
+        a {
+            @include links;
+            color: $black;
+        }
+        a:hover {
+            color: $darkpink;
+        }
+    }
+    #nav-menu {
+        width: 50%;
+        text-align: right;
+        font-size: 40px;
+        @include links;
+    }
+    #nav-menu:hover {
+        color: $darkpink;
+    }
+
+    #vertical-line {
+        display: none;
+    }
+
+    #right-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .lower-nav {
+        width: 100%;
+        margin-top: 10px;
+        a {
+            @include links;
+            color: $black;
+            margin-right: 20px;
+            font-size: 30px;
+        }
+        .github:hover {
+            color: $yellow;
+        }
+        .linkedin:hover {
+            color: $blue;
+        }
+        .instagram:hover {
+            color: $darkpink;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        padding: 60px 60px 40px 60px;
+        #logo {
+            font-size: 50px;
+        }
+        #nav-menu {
+            font-size: 65px;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .navbar {
+        #logo {
+            width: 76px;
+        }
+        #desktop-ul {
+            display: block;
+            #home-link {
+                display: none;
+            }
+            li {
+                display: inline-block;
+                a {
+                    @include links;
+                    font-size: 20px;
+                    color: $black;
+                    margin-left: 70px;
+                    display: block;
+                    position: relative;
+                    padding: 0.2em 0;
+                }
+                a:hover {
+                    color: $darkpink;
+                }
+                /* Fade in */
+                a::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 0.1em;
+                    background-color: $darkpink;
+                    opacity: 0;
+                    transition: opacity 300ms, transform 300ms;
+                }
+                
+                a:hover::after,
+                a:focus::after {
+                    opacity: 1;
+                    transform: translate3d(0, 0.2em, 0);
+                }
+            }
+        }
+        #nav-menu {
+            display: none;
+        }
+        #right-nav {
+            width: 725px;
+        }
+
+        #vertical-line {
+            display: inline-block;
+            border-left: 1px solid $black;
+            height: 55px;
+            margin: 0 10px;
+        }
+
+        .lower-nav {
+            width: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .navbar {
+        #right-nav {
+            width: 850px;
+            #desktop-ul {
+                #home-link {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
